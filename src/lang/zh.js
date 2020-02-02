@@ -73,12 +73,12 @@ export default {
     size: '布局大小'
   },
   login: {
-    title: '系统登录',
+    title: 'Vue+Element基础前端框架登录',
     logIn: '登录',
     username: '账号',
     password: '密码',
-    any: '随便填',
-    thirdparty: '第三方登录',
+    any: '随便填写',
+    thirdparty: '数字证书登录',
     thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！'
   },
   documentation: {
