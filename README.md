@@ -24,73 +24,44 @@
   </a>
 </p>
 
-## 功能
+## 目录结构
 
-```
-- 登录 / 注销
-
-- 权限验证
-  - 页面权限
-  - 指令权限
-  - 权限配置
-  - 二步登录
-
-- 多环境发布
-  - dev sit stage prod
-
-- 全局功能
-  - 国际化多语言
-  - 多种动态换肤
-  - 动态侧边栏（支持多级路由嵌套）
-  - 动态面包屑
-  - 快捷导航(标签页)
-  - Svg Sprite 图标
-  - 本地/后端 mock 数据
-  - Screenfull全屏
-  - 自适应收缩侧边栏
-
-- 编辑器
-  - 富文本
-  - Markdown
-  - JSON 等多格式
-
-- Excel
-  - 导出excel
-  - 导入excel
-  - 前端可视化excel
-  - 导出zip
-
-- 表格
-  - 动态表格
-  - 拖拽表格
-  - 内联编辑
-
-- 错误页面
-  - 401
-  - 404
-
-- 組件
-  - 头像上传
-  - 返回顶部
-  - 拖拽Dialog
-  - 拖拽Select
-  - 拖拽看板
-  - 列表拖拽
-  - SplitPane
-  - Dropzone
-  - Sticky
-  - CountTo
-
-- 综合实例
-- 错误日志
-- Dashboard
-- 引导页
-- ECharts 图表
-- Clipboard(剪贴复制)
-- Markdown2html
+```bash
+├── build                      # 构建相关
+├── mock                       # 项目mock 模拟数据
+├── plop-templates             # 基本模板
+├── public                     # 静态资源
+│   │── favicon.ico            # favicon图标
+│   └── index.html             # html模板
+├── src                        # 源代码
+│   ├── api                    # 所有请求
+│   ├── assets                 # 主题 字体等静态资源
+│   ├── components             # 全局公用组件
+│   ├── directive              # 全局指令
+│   ├── filters                # 全局 filter
+│   ├── icons                  # 项目所有 svg icons
+│   ├── lang                   # 国际化 language
+│   ├── layout                 # 全局 layout
+│   ├── router                 # 路由
+│   ├── store                  # 全局 store管理
+│   ├── styles                 # 全局样式
+│   ├── utils                  # 全局公用方法
+│   ├── vendor                 # 公用vendor
+│   ├── views                  # views 所有页面
+│   ├── App.vue                # 入口页面
+│   ├── main.js                # 入口文件 加载组件 初始化等
+│   └── permission.js          # 权限管理
+├── tests                      # 测试
+├── .env.xxx                   # 环境变量配置
+├── .eslintrc.js               # eslint 配置项
+├── .babelrc                   # babel-loader 配置
+├── .travis.yml                # 自动化CI配置
+├── vue.config.js              # vue-cli 配置
+├── postcss.config.js          # postcss 配置
+└── package.json               # package.json
 ```
 
-## 开发
+## 安装
 
 ```bash
 # 克隆项目
@@ -102,10 +73,10 @@ cd vue-element-admin
 # 安装依赖
 npm install
 
-# 建议不要直接使用 cnpm 安装依赖，会有各种诡异的 bug。可以通过如下操作解决 npm 下载速度慢的问题
+# 建议不要用 cnpm 安装 会有各种诡异的bug 可以通过如下操作解决 npm 下载速度慢的问题
 npm install --registry=https://registry.npm.taobao.org
 
-# 启动服务
+# 本地开发 启动项目
 npm run dev
 ```
 
